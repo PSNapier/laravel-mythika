@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Mythika-ARPG') }}</title>
+        <title>Mythika-ARPG</title>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -42,25 +42,21 @@
 					<div class="navbar-end"></div>
 				</div> -->
 
-				<div class="navbar bg-base-100 text-neutral">
-					<div class="navbar-start"></div>
-					<div class="navbar-center">
-						<ul class="menu menu-horizontal rounded-box">
-							<!-- Navbar menu content here -->
-							<li><a href="#">Guides</a></li>
-							<li><a href="#">Gameplay</a></li>
-							<li><a href="#">Story</a></li>
-							<li><a href="#">Hubs</a></li>
-							<li class="text-primary"><a href="#">Admin Dash</a></li>
-						</ul>
-					</div>
-					<div class="navbar-end"></div>
-				</div>
+				<nav class="h-9 bg-base-100 text-neutral flex">
+					<ul class="menu menu-horizontal menu-compact w-full justify-center self-center">
+						<!-- Navbar menu content here -->
+						<li><a href="#">Guides</a></li>
+						<li><a href="#">Gameplay</a></li>
+						<li><a href="#">Story</a></li>
+						<li><a href="#">Hubs</a></li>
+						<li class="text-primary"><a href="#">Admin Dash</a></li>
+					</ul>
+				</nav>
 			</header>
 
             <!-- Page Content -->
             <main>
-				<div class="hero h-[calc(100vh-8rem-2px)] bg-stone-700 text-neutral">
+				<div class="hero h-[calc(100vh-9px-2px)] bg-stone-700 text-neutral">
 					<div class="hero-content text-center">
 						<div class="max-w-md">
 						<h1 class="text-5xl font-bold">Mythika-ARPG</h1>
@@ -70,7 +66,7 @@
             </main>
         </div>
 
-		<footer class="footer footer-center p-4 bg-transparent text-neutral">
+		<footer class="footer footer-center p-2 text-neutral">
 			<div>
 				<p>Copyright © 2023 Mythika-ARPG</p>
 			</div>
