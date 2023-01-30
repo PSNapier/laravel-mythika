@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/account', function () {
+    return view('account');
+})->middleware(['auth', 'verified'])->name('account');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
