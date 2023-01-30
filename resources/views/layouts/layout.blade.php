@@ -18,20 +18,35 @@
 				<div class="navbar bg-base-100 bg-left bg-no-repeat" style="background-image: url('images/img-header-bg.png');">
 					<div class="navbar-start">
 						{{-- Landing Link --}}
-						<a href="/" class="btn btn-sm btn-link text-base-100">Landing</a>
+						<a href="{{ url('/') }}"><img class="h-12" src="images/img-logo.png" /></a>
+						{{-- <a href="{{ url('/') }}" class="btn btn-sm btn-link text-base-100">Landing</a> --}}
 
 						{{-- Account Link --}}
-						<a href="/account" class="btn btn-sm btn-link text-base-100">Account</a>
+						{{-- <a href="{{ url('/account') }}" class="btn btn-sm btn-link text-base-100">Account</a> --}}
 					</div>
 
 					<div class="navbar-center"></div>
 
-					<div class="navbar-end btn-group">
+					<div class="navbar-end">
 						{{-- Login Button --}}
-						<a href="/login" class="btn btn-sm btn-primary btn-outline text-neutral">Login</a>
+						@auth
+						<form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
+						@endauth
+
+						@guest
+						<a href="{{ url('/login') }}" class="btn btn-sm btn-primary btn-outline text-neutral no-animation">Login</a>
 
 						{{-- Register Button --}}
-						<a a href="/register" class="btn btn-sm btn-primary text-neutral">Register</a>
+						<a a href="{{ url('/register') }}" class="btn btn-sm btn-primary text-neutral no-animation">Register</a>
+						@endguest
 
 						{{-- Account-Nav Toggle Button --}}
 						{{-- <button class="btn btn-square btn-sm btn-ghost text-neutral" onclick="toggle('account-nav')">
@@ -50,23 +65,57 @@
 					<div class="navbar-end"></div>
 				</div> -->
 
-				<nav class="h-9 bg-base-100 text-neutral flex justify-center">
-					<ul class="menu menu-horizontal menu-compact self-center">
+				<nav class="h-12 bg-base-100 text-neutral flex justify-center">
+					<ul class="menu menu-horizontal self-center">
 						<!-- Navbar menu content here -->
-						<li><a href="#">Guides</a></li>
-						<li><a href="#">Gameplay</a></li>
-						<li><a href="#">Story</a></li>
-						<li><a href="#">Hubs</a></li>
-						{{-- <li class="text-primary"><a href="#">Admin Dash</a></li> --}}
+						<li>
+							<label tabindex="0">Guides</label>
+							<ul tabindex="0" class="dropdown-content menu bg-base-100 w-52 ">
+								<li><a>Item 1</a></li>
+								<li><a>Item 2</a></li>
+							</ul>
+						</li>
+						<li>
+							<label tabindex="0">Gameplay</label>
+							<ul tabindex="0" class="dropdown-content menu bg-base-100 w-52">
+								<li><a>Item 1</a></li>
+								<li><a>Item 2</a></li>
+							</ul>
+						</li>
+						<li>
+							<label tabindex="0">Story</label>
+							<ul tabindex="0" class="dropdown-content menu bg-base-100 w-52">
+								<li><a>Item 1</a></li>
+								<li><a>Item 2</a></li>
+							</ul>
+						</li>
+						<li>
+							<label tabindex="0">Hubs</label>
+							<ul tabindex="0" class="dropdown-content menu bg-base-100 w-52">
+								<li><a>Item 1</a></li>
+								<li><a>Item 2</a></li>
+							</ul>
+						</li>
+
+						@auth
+						<li class="text-primary"><a href="#">Admin Dash</a></li>
+						@endauth
 					</ul>
 				</nav>
 			</header>
 
-            <!-- Page Content -->
-            @yield('content')
+			<main class="bg-stone-600 text-neutral">
+				<!-- Session Status -->
+				<x-auth-session-status class="mb-4" :status="session('status')" />
+
+				<div class="hm-[calc(100vh-9px-2px)] text-neutral flex justify-center">
+					<!-- Page Content -->
+					@yield('content')
+				</div>
+			</main>
         </div>
 
-		<footer class="footer footer-center p-2 text-neutral">
+		<footer class="footer footer-center p-2 bg-base-100 text-neutral">
 			<div>
 				<p>Copyright © 2023 Mythika-ARPG</p>
 			</div>
