@@ -26,7 +26,7 @@ class TestEmail extends Mailable
         $subject = 'This is a demo!';
         $name = 'Mythika-ARPG';
 
-        return $this->view('Emails/test')
+        return $this->view('emails/test')
                     ->from("$address", $name)
                     ->cc($address, $name)
                     ->bcc($address, $name)
