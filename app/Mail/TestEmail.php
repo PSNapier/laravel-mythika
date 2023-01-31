@@ -22,7 +22,7 @@ class TestEmail extends Mailable
 
     public function build()
     {
-        $address = 'admin@mythika-arpg.com';
+        $address = env('MAIL_FROM_ADDRESS');
         $subject = 'This is a demo!';
         $name = 'Mythika-ARPG';
 
