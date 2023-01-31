@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/email', function () {
-    return view('email');
-});
+// Route::get('/email', function () {
+//     return view('email');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
