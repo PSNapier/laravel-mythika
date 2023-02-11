@@ -82,9 +82,8 @@
 						@endguest
 
 						{{-- Account-Nav Toggle Button --}}
-						{{--
 						<button
-							class="btn-ghost btn-square btn-sm btn text-neutral"
+							class="btn-ghost btn-square btn-sm btn ml-2 text-neutral"
 							onclick="toggle('account-nav')"
 						>
 							<svg
@@ -100,17 +99,114 @@
 								/>
 							</svg>
 						</button>
-						--}}
 					</div>
 				</div>
 
 				<div class="h-0.5 bg-neutral"></div>
 
-				<!-- <div id="account-nav" class="navbar h-2 bg-stone-500 text-neutral" style="display: none;">
-					<div class="navbar-start"></div>
-					<div class="navbar-center"></div>
-					<div class="navbar-end"></div>
-				</div> -->
+				<div
+					id="account-nav"
+					class="bg-gradient-to-r from-stone-800 to-stone-700 p-2 text-info"
+					style="display: none"
+				>
+					<div class="flex justify-center gap-x-10">
+						<ul
+							tabindex="0"
+							class="font-xl flex h-full max-w-lg flex-wrap items-center justify-center gap-x-4 text-center"
+						>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Profile</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Character</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Inventory</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Genos</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Slots</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Plots</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#"
+									>Recipies, Scrolls & Books</a
+								>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Account Logs</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Manage Account</a>
+							</li>
+							<li
+								class="hover:text-accent hover:underline"
+							>
+								<a href="#">Logout</a>
+							</li>
+						</ul>
+
+						<div class="flex items-center gap-x-2">
+							<div class="text-neutral">
+								<a href="#">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width=".4"
+										stroke="currentColor"
+										class="h-14 w-14"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+										/>
+									</svg>
+								</a>
+							</div>
+
+							<a href="#">
+								<div class="online avatar m-1">
+									<div
+										class="w-10 rounded-full ring-1 ring-neutral"
+									>
+										<img
+											src="/images/img-register-2.png"
+										/>
+									</div>
+								</div>
+							</a>
+
+							<div class="text-sm">
+								<div>[Username] #[Account ID]</div>
+								<div>Membership rank: [rank]</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<nav
 					class="flex h-12 justify-center bg-base-100 text-neutral"
