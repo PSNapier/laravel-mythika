@@ -147,9 +147,7 @@
 							<li
 								class="hover:text-accent hover:underline"
 							>
-								<a href="#"
-									>Recipies, Scrolls & Books</a
-								>
+								<a href="#">Recipes, Scrolls & Books</a>
 							</li>
 							<li
 								class="hover:text-accent hover:underline"
