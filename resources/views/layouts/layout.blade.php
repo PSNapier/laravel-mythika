@@ -16,13 +16,12 @@
 
 		<!-- Scripts -->
 		@vite(['resources/css/app.css', 'resources/js/app.js'])
-		<script src="js/toggle.js"></script>
 </head>
 
 <body class="font-sans antialiased">
 		<div class="min-h-screen min-w-fit bg-base-100">
 				<!-- Header -->
-				<header>
+				<header x-data="{ accountNavOpen: false }">
 						<div
 								class="navbar bg-base-100 bg-left bg-no-repeat"
 								style="background-image: url('/images/img-header-bg.png');"
@@ -35,22 +34,6 @@
 														src="/images/img-logo.png"
 												/>
 										</a>
-										{{--
-						<a
-							href="{{ url('/') }}"
-							class="btn-link btn-sm btn text-base-100"
-							>Landing</a
-						>
-						--}}
-
-										{{-- Account Link --}}
-										{{--
-						<a
-							href="{{ url('/account') }}"
-							class="btn-link btn-sm btn text-base-100"
-							>Account</a
-						>
-						--}}
 								</div>
 
 								<div class="navbar-center"></div>
@@ -88,7 +71,7 @@
 										{{-- Account-Nav Toggle Button --}}
 										<button
 												class="btn-ghost btn-square btn-sm btn ml-2 text-neutral"
-												onclick="toggle('account-nav')"
+												@click="accountNavOpen = ! accountNavOpen"
 										>
 												<svg
 														xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +94,8 @@
 						<div
 								id="account-nav"
 								class="bg-gradient-to-r from-stone-800 to-stone-700 p-2 text-info"
-								style="display: none"
+								x-show="accountNavOpen"
+								@click.outside="accountNavOpen = false"
 						>
 								<div class="flex justify-center gap-x-10">
 										<ul
