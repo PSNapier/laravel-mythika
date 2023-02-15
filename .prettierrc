@@ -1,20 +1,19 @@
 {
 	"overrides": [
 		{
-			"files": ["*.blade.php", "*.php", "*.html"],
+			"files": ["*.blade.php"],
 			"options": {
 				"parser": "blade",
-				"useTabs": true,
-				"tabWidth": 2,
+				"tabWidth": 1,
 				"sortTailwindcssClasses": true,
 				"bracketSameLine": false,
-				"wrapAttributes": "force-expand-multiline"
+				"wrapAttributes": "force"
 			}
 		}
 	],
 	"trailingComma": "all",
 	"useTabs": true,
-	"tabWidth": 6,
+	"tabWidth": 4,
 	"singleQuote": true,
 	"bracketSameLine": true,
 	"printWidth": 240
