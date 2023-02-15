@@ -3,8 +3,7 @@ function toggle(id) {
 
 	if (element.style.display !== 'block') {
 		element.style.display = 'block';
-	}
-	else {
+	} else {
 		element.style.display = 'none';
 	}
 }
