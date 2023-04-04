@@ -26,6 +26,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/upload', function () {
+    return view('upload');
+})->middleware(['auth', 'verified'])->name('upload');
+
 Route::get('/manage-account', function () {
     return view('manage-account');
 })->middleware(['auth', 'verified'])->name('manage-account');
