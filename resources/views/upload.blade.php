@@ -2,7 +2,7 @@
 
 @section('content')
 	<main>
-		<div class="hero h-[calc(100vh-114px)] text-neutral">
+		<div class="m-4 text-neutral">
 			<form method="POST" action="/upload" enctype="multipart/form-data">
 			@csrf
 				<div>
@@ -11,6 +11,11 @@
 				</div>
 				<button type="submit" class="bg-stone-900 p-2">Upload</button>
 			</form>
-			<img src="storage/images/test.png" class="w-[150px]" />
+		</div>
+		<div class="flex-column [&>*]:h-[200px]">
+			@foreach(File::glob('storage/images/*') as $file)
+				<img src="{{ $file }}" />
+			@endforeach
+		</div>
 	</main>
 @endsection
