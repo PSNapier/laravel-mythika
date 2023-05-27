@@ -22,6 +22,8 @@ return new class extends Migration {
 			$table->rememberToken();
 			$table->timestamps();
 			$table->string('rank')->default('user');
+			$table->boolean('ban_state')->default(0);
+			$table->string('avatar_location');
 		});
 	}
 
