@@ -59,4 +59,33 @@ Route::middleware('auth')->group(function () {
                 ->name('logout');
 
 	Route::post('upload', [FileController::class, 'upload']);
+
+	// Bulk Routes
+	Route::get('/profile', function () {
+		return view('profile');
+	});
+	Route::get('/character', function () {
+		return view('character');
+	});
+	Route::get('/inventory', function () {
+		return view('inventory');
+	});
+	Route::get('/genos', function () {
+		return view('genos');
+	});
+	Route::get('/slots', function () {
+		return view('slots');
+	});
+	Route::get('/plots', function () {
+		return view('plots');
+	});
+	Route::get('/recipes-scrolls-books', function () {
+		return view('recipes-scrolls-books');
+	});
+	Route::get('/account-logs', function () {
+		return view('account-logs');
+	});
+	Route::get('/manage-account', function () {
+		return view('manage-account');
+	});
 });
