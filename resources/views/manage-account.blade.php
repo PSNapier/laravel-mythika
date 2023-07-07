@@ -41,8 +41,8 @@
 				<div class="flex">
 					<div class="w-[20%]">Password</div>
 					<div class="w-[50%] grid grid-cols-2 gap-1"> 
-						<input class="h-6 w-full px-2 bg-white border-solid border-2 border-accent text-stone-400 rounded-md" type="password" placeholder="new pass"></input>
-						<input class="h-6 w-full px-2 bg-white border-solid border-2 border-accent text-stone-400 rounded-md" type="password" placeholder="confirm pass"></input>
+						<input class="h-6 w-full px-2 bg-white border-solid border-2 border-accent text-stone-400 rounded-md" type="password" placeholder="new"></input>
+						<input class="h-6 w-full px-2 bg-white border-solid border-2 border-accent text-stone-400 rounded-md" type="password" placeholder="confirm"></input>
 					</div>
 					<button class="w-[30%] ml-2 bg-stone-800 text-neutral">Update</button>
 				</div>
@@ -57,19 +57,26 @@
 
 		{{-- Social Media --}}
 		<div class="bg-neutral [&>div]:p-2">
-			<div class="bg-stone-800">{{ Auth::user()->name }}'s Social Media</div>
-			<div class="text-stone-800 grid grid-cols-2 gap-y-2 gap-5">
+			<div class="bg-stone-800">{{ Auth::user()->name }}'s Social Media <button class="float-right bg-stone-600 px-6">Save</button></div>
+			<div class="text-stone-800 grid grid-cols-2 gap-2">
 				@foreach (['DeviantART', 'Trello', 'Toyhouse', 'Tumblr', 'Furaffinity', 'Twitter', 'ArtStation', 'Buzzly', 'YouTube', 'PixIV'] as $link)
-					<x-manage-account-social-links>
+					<x-manage-account-links>
 						{{ $link }}
-					</x-manage-account-social-links>
+					</x-manage-account-links>
 				@endforeach
 			</div>
 		</div>
 
 		{{-- Shops --}}
 		<div class="bg-neutral [&>div]:p-2">
-			<div class="bg-stone-800">{{ Auth::user()->name }}'s Shops</div>
+			<div class="bg-stone-800">{{ Auth::user()->name }}'s Shops <button class="float-right bg-stone-600 px-6">Save</button></div>
+			<div class="text-stone-800 grid grid-cols-2 gap-2">
+				@foreach (['Synthesis', 'Items', 'Genos', 'Runes', 'Breeding', 'Art', 'Seeds', 'Scrolls'] as $link)
+					<x-manage-account-links>
+						{{ $link }}
+					</x-manage-account-links>
+				@endforeach
+			</div>
 		</div>
 
 		<div class="bg-neutral [&>div]:p-2">
