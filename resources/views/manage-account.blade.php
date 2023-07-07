@@ -79,8 +79,12 @@
 			</div>
 		</div>
 
+		{{-- Featured Mythikans --}}
 		<div class="bg-neutral [&>div]:p-2">
-			<div class="bg-stone-800">{{ Auth::user()->name }}'s Featured Mythikans</div>
+			<div class="bg-stone-800">{{ Auth::user()->name }}'s Featured Mythikans <button class="float-right bg-stone-600 px-6">Save</button></div>
+			<div class="text-stone-800 text-center">
+				<button class="w-3/4 bg-stone-800 text-neutral">Select Featured Mythikans...</button>
+			</div>
 		</div>
 
 		<div class="lg:col-span-2 bg-neutral [&>div]:p-2">
