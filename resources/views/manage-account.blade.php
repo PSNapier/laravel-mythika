@@ -87,8 +87,20 @@
 			</div>
 		</div>
 
+		{{-- Custom Box --}}
 		<div class="lg:col-span-2 bg-neutral [&>div]:p-2">
-			<div class="bg-stone-800">{{ Auth::user()->name }}'s Custom Box</div>
+			<div class="bg-stone-800">{{ Auth::user()->name }}'s Custom Box <button class="float-right bg-stone-600 px-6">Save</button></div>
+			<div class="text-stone-800">
+				<div>
+					<div class="font-bold">HTML</div>
+					<input class="w-full" type="text" placeholder="Enter HTML..."></input>
+				</div>
+
+				<div class="mt-">
+					<div class="font-bold">CSS</div>
+					<input class="w-full" type="text" placeholder="Enter CSS..."></input>
+				</div>
+			</div>
 		</div>
 	</main>
 
