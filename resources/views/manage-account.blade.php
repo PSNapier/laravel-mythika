@@ -2,8 +2,10 @@
 
 @section('content')
 	<main class="my-4 w-11/12 lg:w-5/6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+		{{-- Under Construction Warning --}}
 		<div class="lg:col-span-2 text-center text-accent">🚧 Page under construction! Functionality not yet implemented. 🚧</div>
 
+		{{-- Saves --}}
 		<div class="bg-neutral [&>div]:p-2">
 			<div class="bg-stone-800">{{ Auth::user()->name }}'s Saves</div>
 			<div class="text-stone-800 grid grid-cols-1 gap-2">
@@ -53,10 +55,19 @@
 			</div>
 		</div>
 
+		{{-- Social Media --}}
 		<div class="bg-neutral [&>div]:p-2">
 			<div class="bg-stone-800">{{ Auth::user()->name }}'s Social Media</div>
+			<div class="text-stone-800 grid grid-cols-2 gap-y-2 gap-5">
+				@foreach (['DeviantART', 'Trello', 'Toyhouse', 'Tumblr', 'Furaffinity', 'Twitter', 'ArtStation', 'Buzzly', 'YouTube', 'PixIV'] as $link)
+					<x-manage-account-social-links>
+						{{ $link }}
+					</x-manage-account-social-links>
+				@endforeach
+			</div>
 		</div>
 
+		{{-- Shops --}}
 		<div class="bg-neutral [&>div]:p-2">
 			<div class="bg-stone-800">{{ Auth::user()->name }}'s Shops</div>
 		</div>
