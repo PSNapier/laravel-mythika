@@ -9,7 +9,7 @@
 					<lable>Thumbnail</lable>
 					<input type="file" name="thumbnail" />
 				</div>
-				<button type="submit" class="bg-neutral-900 p-2">Upload</button>
+				<button type="submit" class="bg-stone-900 p-2">Upload</button>
 			</form>
 		</div>
 		<div class="flex-column [&>*]:h-[200px]">

@@ -1,5 +1,5 @@
 @extends('layouts/layout') @section('content')
-<main class="min-h-screen w-11/12 flex-col bg-neutral-700 p-4">
+<main class="min-h-screen w-11/12 flex-col bg-stone-700 p-4">
 	<div class="m-auto w-1/2">
 		<div class="mb-4 text-neutral">
 			{{

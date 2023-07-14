@@ -39,7 +39,7 @@
 
 	<nav x-show="navOpen"
 		@click.outside="navOpen = false">
-		<div class="z-10 overflow-scroll bg-neutral-900 bg-opacity-90 p-4 text-right backdrop-blur-md [&>*]:text-lg [&>hr]:my-4 [&>hr]:opacity-25">
+		<div class="z-10 overflow-scroll bg-stone-900 bg-opacity-90 p-4 text-right backdrop-blur-md [&>*]:text-lg [&>hr]:my-4 [&>hr]:opacity-25">
 			@guest
 				<ul class="text-info">
 					<li class="text-xl font-medium hover:text-accent hover:underline">
