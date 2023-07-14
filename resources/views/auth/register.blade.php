@@ -3,7 +3,7 @@
 @section('content')
 	<main class="grid min-h-screen w-screen grid-cols-3 sm:w-11/12 sm:min-w-[810px] sm:gap-4">
 		{{-- Register 1 --}}
-		<div class="col-span-3 bg-stone-700 sm:col-span-2 sm:min-w-[479px]">
+		<div class="col-span-3 bg-neutral-700 sm:col-span-2 sm:min-w-[479px]">
 			<img class="w-full"
 				src="images/img-register-1.png" />
 
@@ -29,10 +29,10 @@
 		</div>
 
 		{{-- Register 2 --}}
-		<div class="col-span-3 bg-stone-700 sm:col-span-1 sm:min-w-[177px]">
+		<div class="col-span-3 bg-neutral-700 sm:col-span-1 sm:min-w-[177px]">
 			<div class="sm:relative sm:h-[182px]">
-				<div class="h-1/2 bg-stone-600"></div>
-				<div class="h-1/2 bg-stone-700"></div>
+				<div class="h-1/2 bg-neutral-600"></div>
+				<div class="h-1/2 bg-neutral-700"></div>
 				<img class="sm:absolute sm:bottom-0 sm:left-1/2 sm:h-[182px] sm:-translate-x-1/2 sm:transform"
 					src="images/img-register-2.png" />
 			</div>

@@ -18,7 +18,7 @@
 </head>
 
 <body class="font-sans antialiased">
-	<div class="min-h-screen min-w-fit bg-stone-600">
+	<div class="min-h-screen min-w-fit bg-neutral-600">
 		<!-- Header -->
 		<header x-data="{ navOpen: false }">
 			<x-nav-mobile class="sm:hidden" />

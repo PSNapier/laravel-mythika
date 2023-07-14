@@ -41,7 +41,7 @@
 
 	@auth
 		<nav id="account-nav"
-			class="bg-gradient-to-r from-stone-800 to-stone-700 p-2 text-info"
+			class="bg-gradient-to-r from-neutral-800 to-neutral-700 p-2 text-info"
 			x-show="navOpen"
 			@click.outside="navOpen = false">
 			<div class="flex items-center justify-center gap-x-10">
