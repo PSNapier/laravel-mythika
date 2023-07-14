@@ -48,7 +48,7 @@
 				<ul tabindex="0"
 					class="font-xl flex h-full max-w-lg flex-wrap items-center justify-center gap-x-4 text-center">
 					<li class="hover:text-accent hover:underline">
-						<a href="#">Profile</a>
+						<a href="{{ url('/profile') }}">Profile</a>
 					</li>
 					<li class="hover:text-accent hover:underline">
 						<a href="#">Character</a>
