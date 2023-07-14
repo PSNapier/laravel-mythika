@@ -6,21 +6,23 @@
 		<div class="text-center text-accent bg-neutral-600 p-4">🚧 Page under construction! Functionality not yet implemented. 🚧</div>
 
 		{{-- Banner --}}
-		<div><img class="object-fill" src="/images/img-profile-banner.webp" /></div>
+		<div><img class="object-cover" src="/images/img-profile-banner.webp" /></div>
 
 		{{-- Info --}}
 		<div class="m-4">
-			<div class="text-neutral-800 flex flex-row">
-				<img class="w-[20%]" src="/images/img-avatar.webp" />
+			<div class="text-neutral-800 flex flex-row flex-wrap justify-between gap-4">
+				<div class="flex flex-row gap-4">
+					<img class="h-[125px]" src="/images/img-avatar.webp" />
 
-				<div class="w-[40%]">
-					<div>Username #[ID]</div>
-					<div>@Username</div>
-					<div>Membership Status: </div>
-					<div>Admin Department</div>
+					<div class="pt-4">
+						<div>Username #[ID]</div>
+						<div>@Username</div>
+						<div>Membership Status: </div>
+						<div>Admin Department</div>
+					</div>
 				</div>
 
-				<div class="w-[40%]">
+				<div class="min-w-[200px] pt-4 text-right">
 					<div>[date] - Date Joined</div>
 					<div>[date] - Date Of Birth</div>
 					<div>[ID] - Santuary Taming ID</div>
